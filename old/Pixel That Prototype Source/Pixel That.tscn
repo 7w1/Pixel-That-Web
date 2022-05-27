@@ -1,0 +1,1916 @@
+[gd_scene load_steps=103 format=2]
+
+[ext_resource path="res://Pixel That.gd" type="Script" id=1]
+[ext_resource path="res://button.tres" type="StyleBox" id=2]
+[ext_resource path="res://Roboto-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://achivementimgs/5image.png" type="Texture" id=4]
+[ext_resource path="res://button_pressed.tres" type="StyleBox" id=5]
+[ext_resource path="res://button_disabled.tres" type="StyleBox" id=6]
+[ext_resource path="res://button_hover.tres" type="StyleBox" id=7]
+[ext_resource path="res://Panel.gd" type="Script" id=8]
+[ext_resource path="res://SidePanel.gd" type="Script" id=9]
+[ext_resource path="res://panel_button_hover.tres" type="StyleBox" id=10]
+[ext_resource path="res://panel_button_disabled.tres" type="StyleBox" id=11]
+[ext_resource path="res://panel_button_normal.tres" type="StyleBox" id=12]
+[ext_resource path="res://panel_button_pressed.tres" type="StyleBox" id=13]
+[ext_resource path="res://party.png" type="Texture" id=14]
+[ext_resource path="res://RichTextLabel.gd" type="Script" id=15]
+[ext_resource path="res://achivementimgs/10image.png" type="Texture" id=16]
+[ext_resource path="res://achivementimgs/1image.png" type="Texture" id=17]
+[ext_resource path="res://achivementimgs/25image.png" type="Texture" id=18]
+[ext_resource path="res://achivementimgs/50image.png" type="Texture" id=19]
+[ext_resource path="res://achivementimgs/100image.png" type="Texture" id=20]
+[ext_resource path="res://achivementimgs/75image.png" type="Texture" id=21]
+[ext_resource path="res://achivementimgs/250image.png" type="Texture" id=22]
+[ext_resource path="res://achivementimgs/69image.png" type="Texture" id=23]
+[ext_resource path="res://achivementimgs/2kimage.png" type="Texture" id=24]
+[ext_resource path="res://achivementimgs/4kimage.png" type="Texture" id=25]
+[ext_resource path="res://achivementimgs/5kimage.png" type="Texture" id=26]
+[ext_resource path="res://achivementimgs/7kimage.png" type="Texture" id=27]
+[ext_resource path="res://achivementimgs/10kimage.png" type="Texture" id=28]
+[ext_resource path="res://achivementimgs/500image.png" type="Texture" id=29]
+[ext_resource path="res://achivementimgs/3kimage.png" type="Texture" id=30]
+[ext_resource path="res://achivementimgs/1kimage.png" type="Texture" id=31]
+[ext_resource path="res://achivementimgs/6kimage.png" type="Texture" id=32]
+[ext_resource path="res://achivementimgs/8kimage.png" type="Texture" id=33]
+[ext_resource path="res://achivementimgs/9kimage.png" type="Texture" id=34]
+[ext_resource path="res://flex_grid_container.gd" type="Script" id=35]
+[ext_resource path="res://ScrollContainer.gd" type="Script" id=36]
+[ext_resource path="res://VBoxContainer.gd" type="Script" id=37]
+
+[sub_resource type="DynamicFont" id=2]
+size = 22
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.101961, 0.219608, 0.32549, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=8]
+size = 22
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.09375, 0.22998, 0.375, 1 )
+border_color = Color( 0.227451, 0.32549, 0.662745, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.0784314, 0.152941, 0.317647, 1 )
+border_color = Color( 0.227451, 0.32549, 0.662745, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.109804, 0.403922, 0.454902, 1 )
+border_color = Color( 0.227451, 0.32549, 0.662745, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.101961, 0.113725, 0.219608, 1 )
+border_color = Color( 0.227451, 0.32549, 0.662745, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.109804, 0.403922, 0.454902, 1 )
+border_color = Color( 0.227451, 0.32549, 0.662745, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=9]
+size = 18
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 48
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 24
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 18
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.101961, 0.113725, 0.219608, 1 )
+corner_radius_top_left = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="DynamicFont" id=14]
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 20
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 12
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 12
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=18]
+size = 24
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=19]
+size = 12
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 48
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=21]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 36
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=23]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 32
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=25]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=26]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=27]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=28]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=30]
+size = 24
+extra_spacing_bottom = 5
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=29]
+bg_color = Color( 0.356863, 0.45098, 0.466667, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+shadow_color = Color( 0, 0, 0, 0.505882 )
+shadow_size = 25
+
+[sub_resource type="DynamicFont" id=31]
+size = 18
+font_data = ExtResource( 3 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 14 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 14 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 14 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 14 )
+region = Rect2( 48, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 14 )
+region = Rect2( 64, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 14 )
+region = Rect2( 80, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 14 )
+region = Rect2( 96, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 14 )
+region = Rect2( 112, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 14 )
+region = Rect2( 128, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 14 )
+region = Rect2( 144, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 14 )
+region = Rect2( 160, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 14 )
+region = Rect2( 176, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 14 )
+region = Rect2( 192, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 14 )
+region = Rect2( 208, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 14 )
+region = Rect2( 224, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 14 )
+region = Rect2( 240, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 14 )
+region = Rect2( 256, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 14 )
+region = Rect2( 272, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 14 )
+region = Rect2( 288, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 14 )
+region = Rect2( 304, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 14 )
+region = Rect2( 320, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=53]
+atlas = ExtResource( 14 )
+region = Rect2( 336, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=54]
+atlas = ExtResource( 14 )
+region = Rect2( 352, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 14 )
+region = Rect2( 368, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=56]
+atlas = ExtResource( 14 )
+region = Rect2( 384, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=57]
+atlas = ExtResource( 14 )
+region = Rect2( 400, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=58]
+atlas = ExtResource( 14 )
+region = Rect2( 416, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 14 )
+region = Rect2( 432, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=60]
+atlas = ExtResource( 14 )
+region = Rect2( 448, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 14 )
+region = Rect2( 464, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=62]
+atlas = ExtResource( 14 )
+region = Rect2( 480, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=63]
+atlas = ExtResource( 14 )
+region = Rect2( 496, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=64]
+animations = [ {
+"frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ) ],
+"loop": true,
+"name": "default",
+"speed": 32.0
+} ]
+
+[sub_resource type="SpriteFrames" id=65]
+animations = [ {
+"frames": [ SubResource( 33 ), SubResource( 50 ), SubResource( 55 ), SubResource( 63 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ), SubResource( 33 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+} ]
+
+[node name="Pixel That" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Picture" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Search" type="LineEdit" parent="Picture"]
+margin_left = 32.0
+margin_top = 108.0
+margin_right = 220.0
+margin_bottom = 140.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
+align = 1
+placeholder_text = "Search..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="New Image" type="Button" parent="Picture"]
+margin_left = 228.0
+margin_top = 108.0
+margin_right = 416.0
+margin_bottom = 140.0
+hint_tooltip = "Get a new image. You won't recieve extra completion pixels!"
+focus_mode = 0
+mouse_filter = 1
+custom_fonts/font = SubResource( 8 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+text = "New Image"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConsoleInfo" type="Label" parent="Picture"]
+margin_left = 32.0
+margin_top = 144.0
+margin_right = 415.0
+margin_bottom = 216.0
+custom_colors/font_color = Color( 0.356863, 0.364706, 0.407843, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Sometimes images take a bit to load...
+If the image doesn't update after 10-20 seconds,
+check your web browser's console (usually F12)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pixels" type="Label" parent="Picture"]
+margin_left = 32.0
+margin_top = 4.0
+margin_right = 416.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 10 )
+text = "Pixels: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pixels2" type="Label" parent="Picture"]
+margin_left = 32.0
+margin_top = 56.0
+margin_right = 416.0
+margin_bottom = 85.0
+hint_tooltip = "PPS = Auto Cursor's Pixels Per Second Uncovering speed
+PPP = Pixels per pixel uncovered"
+mouse_filter = 1
+custom_fonts/font = SubResource( 11 )
+text = "PPS: 100 - PPP: 100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pixels3" type="Label" parent="Picture"]
+margin_left = 32.0
+margin_top = 80.0
+margin_right = 416.0
+margin_bottom = 109.0
+hint_tooltip = "DIFF = PPS - Pixel regen per second (If negative ICM is set to zero until positive)
+ICM = Image Completion Multiplier, Extra pixels you get for image completion. Width*Height*ICM"
+mouse_filter = 1
+custom_fonts/font = SubResource( 11 )
+text = "DIFF: 100 - ICM: 5x"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="CenterContainer" parent="Picture"]
+margin_left = 32.0
+margin_top = 148.0
+margin_right = 32.0
+margin_bottom = 148.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Picture/Container"]
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureOverlay" type="TextureRect" parent="Picture/Container"]
+mouse_default_cursor_shape = 2
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="HTTPRequest2" type="HTTPRequest" parent="."]
+
+[node name="AutoCursorTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="AutoSaveTimer" type="Timer" parent="."]
+wait_time = 30.0
+autostart = true
+
+[node name="GuiScaleUpdateSpeed" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="NewImageWait" type="Timer" parent="."]
+one_shot = true
+
+[node name="SidePanel" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -40.0
+margin_bottom = 40.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="Control" parent="SidePanel"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UpgradesButton" type="Button" parent="SidePanel/Buttons"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -320.0
+margin_top = 132.0
+margin_right = -210.0
+margin_bottom = 168.0
+rect_rotation = -90.0
+focus_mode = 0
+custom_fonts/font = SubResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 6 )
+custom_styles/normal = ExtResource( 2 )
+text = "Upgrades"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PrestigeButton" type="Button" parent="SidePanel/Buttons"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -320.0
+margin_top = 244.0
+margin_right = -210.0
+margin_bottom = 280.0
+rect_rotation = -90.0
+focus_mode = 0
+custom_fonts/font = SubResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 6 )
+custom_styles/normal = ExtResource( 2 )
+text = "Prestige"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AchievementsButton" type="Button" parent="SidePanel/Buttons"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -320.0
+margin_top = 356.0
+margin_right = -210.0
+margin_bottom = 392.0
+rect_rotation = -90.0
+focus_mode = 0
+custom_fonts/font = SubResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 6 )
+custom_styles/normal = ExtResource( 2 )
+text = "Achievements"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatsButton" type="Button" parent="SidePanel/Buttons"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -320.0
+margin_top = 468.0
+margin_right = -210.0
+margin_bottom = 504.0
+rect_rotation = -90.0
+focus_mode = 0
+custom_fonts/font = SubResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 6 )
+custom_styles/normal = ExtResource( 2 )
+text = "Stats"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuButton" type="Button" parent="SidePanel/Buttons"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -320.0
+margin_top = 580.0
+margin_right = -210.0
+margin_bottom = 616.0
+rect_rotation = -90.0
+focus_mode = 0
+custom_fonts/font = SubResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 6 )
+custom_styles/normal = ExtResource( 2 )
+text = "Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="SidePanel"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 15.0
+margin_left = -288.0
+margin_bottom = -6.10352e-05
+grow_horizontal = 0
+custom_styles/panel = SubResource( 13 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Upgrades" type="Control" parent="SidePanel/Panel"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SidePanel/Panel/Upgrades"]
+anchor_left = 0.069
+anchor_top = 0.033
+anchor_right = 1.0
+anchor_bottom = 0.973
+margin_left = -3.872
+margin_top = 0.200003
+margin_right = 394.0
+margin_bottom = 0.200012
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Upgrades" type="VBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer"]
+margin_right = 677.0
+margin_bottom = 487.0
+custom_constants/separation = 15
+
+[node name="amount" type="HBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades"]
+visible = false
+margin_right = 677.0
+margin_bottom = 19.0
+alignment = 2
+
+[node name="Buy 1x" type="Button" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/amount"]
+margin_left = 438.0
+margin_right = 506.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 14 )
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 13 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 11 )
+custom_styles/normal = ExtResource( 12 )
+disabled = true
+text = "Buy 1x"
+
+[node name="Buy 10x" type="Button" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/amount"]
+margin_left = 510.0
+margin_right = 587.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 14 )
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 13 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 11 )
+custom_styles/normal = ExtResource( 12 )
+text = "Buy 10x"
+
+[node name="Buy 100x" type="Button" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/amount"]
+margin_left = 591.0
+margin_right = 677.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 14 )
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 13 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 11 )
+custom_styles/normal = ExtResource( 12 )
+text = "Buy 100x"
+
+[node name="AutoCursor" type="HBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades"]
+margin_right = 677.0
+margin_bottom = 44.0
+custom_constants/separation = 15
+
+[node name="Text" type="VBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/AutoCursor"]
+margin_right = 162.0
+margin_bottom = 44.0
+custom_constants/separation = 0
+
+[node name="Title" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/AutoCursor/Text"]
+margin_right = 162.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 15 )
+text = "Auto Cursor"
+
+[node name="Info" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/AutoCursor/Text"]
+margin_top = 24.0
+margin_right = 162.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 16 )
+text = "Automatically uncovers pixels"
+
+[node name="Amount" type="VBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/AutoCursor"]
+margin_left = 177.0
+margin_right = 224.0
+margin_bottom = 44.0
+custom_constants/separation = 0
+
+[node name="Amount" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/AutoCursor/Amount"]
+margin_right = 47.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 17 )
+text = "Amount:"
+
+[node name="Label" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/AutoCursor/Amount"]
+margin_top = 15.0
+margin_right = 47.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 18 )
+text = "0"
+
+[node name="Power" type="VBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/AutoCursor"]
+margin_left = 239.0
+margin_right = 276.0
+margin_bottom = 44.0
+custom_constants/separation = 0
+
+[node name="Amount" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/AutoCursor/Power"]
+margin_right = 37.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 17 )
+text = "Power:"
+
+[node name="Label" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/AutoCursor/Power"]
+margin_top = 15.0
+margin_right = 37.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 18 )
+text = "1"
+
+[node name="BuyAutoCursor" type="Button" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/AutoCursor"]
+margin_left = 291.0
+margin_right = 438.0
+margin_bottom = 44.0
+focus_mode = 0
+custom_fonts/font = SubResource( 14 )
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 13 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 11 )
+custom_styles/normal = ExtResource( 12 )
+text = "Buy for 100 pixels"
+
+[node name="EmpowerAutoCursor" type="Button" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/AutoCursor"]
+margin_left = 453.0
+margin_right = 677.0
+margin_bottom = 44.0
+focus_mode = 0
+custom_fonts/font = SubResource( 14 )
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 13 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 11 )
+custom_styles/normal = ExtResource( 12 )
+text = "Empower for 10 auto cursors"
+
+[node name="ICM" type="HBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades"]
+margin_top = 59.0
+margin_right = 677.0
+margin_bottom = 103.0
+custom_constants/separation = 15
+
+[node name="Text" type="VBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/ICM"]
+margin_right = 153.0
+margin_bottom = 44.0
+custom_constants/separation = 0
+
+[node name="Title" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/ICM/Text"]
+margin_right = 153.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 15 )
+text = "ICM"
+
+[node name="Info" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/ICM/Text"]
+margin_top = 24.0
+margin_right = 153.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 16 )
+text = "Image Completion Multiplier"
+
+[node name="Regen" type="VBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/ICM"]
+margin_left = 168.0
+margin_right = 233.0
+margin_bottom = 44.0
+custom_constants/separation = 0
+
+[node name="Amount" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/ICM/Regen"]
+margin_right = 65.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 17 )
+text = "Pixel Regen:"
+
+[node name="Label" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/ICM/Regen"]
+margin_top = 15.0
+margin_right = 65.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 18 )
+text = "0"
+
+[node name="Amount" type="VBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/ICM"]
+margin_left = 248.0
+margin_right = 291.0
+margin_bottom = 44.0
+custom_constants/separation = 0
+
+[node name="Amount" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/ICM/Amount"]
+margin_right = 43.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 17 )
+text = "Current:"
+
+[node name="Label" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/ICM/Amount"]
+margin_top = 15.0
+margin_right = 43.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 18 )
+text = "2x"
+
+[node name="BuyICM" type="Button" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/ICM"]
+margin_left = 306.0
+margin_right = 465.0
+margin_bottom = 44.0
+hint_tooltip = "To buy this your PPS must be greater than your RPS*2"
+focus_mode = 0
+custom_fonts/font = SubResource( 14 )
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 13 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 11 )
+custom_styles/normal = ExtResource( 12 )
+text = "Buy for 1,000 pixels"
+
+[node name="BuyICM2" type="Button" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/ICM"]
+margin_left = 480.0
+margin_right = 567.0
+margin_bottom = 44.0
+focus_mode = 0
+custom_fonts/font = SubResource( 14 )
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 13 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 11 )
+custom_styles/normal = ExtResource( 12 )
+text = "Destroy 1"
+
+[node name="PartyPixelMulti" type="HBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades"]
+margin_top = 118.0
+margin_right = 677.0
+margin_bottom = 162.0
+custom_constants/separation = 15
+
+[node name="Text" type="VBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelMulti"]
+margin_right = 146.0
+margin_bottom = 44.0
+custom_constants/separation = 0
+
+[node name="Title" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelMulti/Text"]
+margin_right = 146.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 15 )
+text = "Party Pixel Multi"
+
+[node name="Info" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelMulti/Text"]
+margin_top = 24.0
+margin_right = 146.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 16 )
+text = "Party pixel PPP multiplier"
+
+[node name="Amount" type="VBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelMulti"]
+margin_left = 161.0
+margin_right = 204.0
+margin_bottom = 44.0
+custom_constants/separation = 0
+
+[node name="Amount" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelMulti/Amount"]
+margin_right = 43.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 17 )
+text = "Current:"
+
+[node name="Label" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelMulti/Amount"]
+margin_top = 15.0
+margin_right = 43.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 18 )
+text = "10x"
+
+[node name="PartyPixelMulti" type="Button" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelMulti"]
+margin_left = 219.0
+margin_right = 387.0
+margin_bottom = 44.0
+focus_mode = 0
+custom_fonts/font = SubResource( 14 )
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 13 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 11 )
+custom_styles/normal = ExtResource( 12 )
+text = "Buy for 10,000 pixels"
+
+[node name="PartyPixelLength" type="HBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades"]
+margin_top = 177.0
+margin_right = 677.0
+margin_bottom = 221.0
+custom_constants/separation = 15
+
+[node name="Text" type="VBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelLength"]
+margin_right = 163.0
+margin_bottom = 44.0
+custom_constants/separation = 0
+
+[node name="Title" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelLength/Text"]
+margin_right = 163.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 15 )
+text = "Party Pixel Length"
+
+[node name="Info" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelLength/Text"]
+margin_top = 24.0
+margin_right = 163.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 16 )
+text = "How long the party will last"
+
+[node name="Amount" type="VBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelLength"]
+margin_left = 178.0
+margin_right = 221.0
+margin_bottom = 44.0
+custom_constants/separation = 0
+
+[node name="Amount" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelLength/Amount"]
+margin_right = 43.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 17 )
+text = "Current:"
+
+[node name="Label" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelLength/Amount"]
+margin_top = 15.0
+margin_right = 43.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 18 )
+text = "10s"
+
+[node name="PartyPixelLength" type="Button" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelLength"]
+margin_left = 236.0
+margin_right = 404.0
+margin_bottom = 44.0
+focus_mode = 0
+custom_fonts/font = SubResource( 14 )
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 13 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 11 )
+custom_styles/normal = ExtResource( 12 )
+text = "Buy for 10,000 pixels"
+
+[node name="PartyPixelTime" type="HBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades"]
+margin_top = 236.0
+margin_right = 677.0
+margin_bottom = 280.0
+custom_constants/separation = 15
+
+[node name="Text" type="VBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelTime"]
+margin_right = 209.0
+margin_bottom = 44.0
+custom_constants/separation = 0
+
+[node name="Title" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelTime/Text"]
+margin_right = 209.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 15 )
+text = "Party Pixel Frequency"
+
+[node name="Info" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelTime/Text"]
+margin_top = 24.0
+margin_right = 209.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 16 )
+text = "Max time party pixel will take to spawn"
+
+[node name="Amount" type="VBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelTime"]
+margin_left = 224.0
+margin_right = 275.0
+margin_bottom = 44.0
+custom_constants/separation = 0
+
+[node name="Amount" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelTime/Amount"]
+margin_right = 51.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 17 )
+text = "Current:"
+
+[node name="Label" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelTime/Amount"]
+margin_top = 15.0
+margin_right = 51.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 18 )
+text = "600s"
+
+[node name="PartyPixelTime" type="Button" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelTime"]
+margin_left = 290.0
+margin_right = 458.0
+margin_bottom = 44.0
+focus_mode = 0
+custom_fonts/font = SubResource( 14 )
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 13 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 11 )
+custom_styles/normal = ExtResource( 12 )
+text = "Buy for 10,000 pixels"
+
+[node name="GlitchPixelMulti" type="HBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades"]
+margin_top = 295.0
+margin_right = 677.0
+margin_bottom = 339.0
+custom_constants/separation = 15
+
+[node name="Text" type="VBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelMulti"]
+margin_right = 151.0
+margin_bottom = 44.0
+custom_constants/separation = 0
+
+[node name="Title" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelMulti/Text"]
+margin_right = 151.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 15 )
+text = "Glitch Pixel Multi"
+
+[node name="Info" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelMulti/Text"]
+margin_top = 24.0
+margin_right = 151.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 16 )
+text = "Glitch Pixel ICM multiplier"
+
+[node name="Amount" type="VBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelMulti"]
+margin_left = 166.0
+margin_right = 217.0
+margin_bottom = 44.0
+custom_constants/separation = 0
+
+[node name="Amount" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelMulti/Amount"]
+margin_right = 51.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 17 )
+text = "Current:"
+
+[node name="Label" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelMulti/Amount"]
+margin_top = 15.0
+margin_right = 51.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 18 )
+text = "100x"
+
+[node name="GlitchPixelMulti" type="Button" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelMulti"]
+margin_left = 232.0
+margin_right = 400.0
+margin_bottom = 44.0
+focus_mode = 0
+custom_fonts/font = SubResource( 14 )
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 13 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 11 )
+custom_styles/normal = ExtResource( 12 )
+text = "Buy for 10,000 pixels"
+
+[node name="GlitchPixelLength" type="HBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades"]
+margin_top = 354.0
+margin_right = 677.0
+margin_bottom = 398.0
+custom_constants/separation = 15
+
+[node name="Text" type="VBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelLength"]
+margin_right = 168.0
+margin_bottom = 44.0
+custom_constants/separation = 0
+
+[node name="Title" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelLength/Text"]
+margin_right = 168.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 15 )
+text = "Glitch Pixel Length"
+
+[node name="Info" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelLength/Text"]
+margin_top = 24.0
+margin_right = 168.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 16 )
+text = "How long the glitch will last"
+
+[node name="Amount" type="VBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelLength"]
+margin_left = 183.0
+margin_right = 226.0
+margin_bottom = 44.0
+custom_constants/separation = 0
+
+[node name="Amount" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelLength/Amount"]
+margin_right = 43.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 17 )
+text = "Current:"
+
+[node name="Label" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelLength/Amount"]
+margin_top = 15.0
+margin_right = 43.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 18 )
+text = "10s"
+
+[node name="GlitchPixelLength" type="Button" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelLength"]
+margin_left = 241.0
+margin_right = 409.0
+margin_bottom = 44.0
+focus_mode = 0
+custom_fonts/font = SubResource( 14 )
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 13 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 11 )
+custom_styles/normal = ExtResource( 12 )
+text = "Buy for 10,000 pixels"
+
+[node name="GlitchPixelTime" type="HBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades"]
+margin_top = 413.0
+margin_right = 677.0
+margin_bottom = 457.0
+custom_constants/separation = 15
+
+[node name="Text" type="VBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelTime"]
+margin_right = 211.0
+margin_bottom = 44.0
+custom_constants/separation = 0
+
+[node name="Title" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelTime/Text"]
+margin_right = 211.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 15 )
+text = "Glitch Pixel Frequency"
+
+[node name="Info" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelTime/Text"]
+margin_top = 24.0
+margin_right = 211.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 16 )
+text = "Max time glitch pixel will take to spawn"
+
+[node name="Amount" type="VBoxContainer" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelTime"]
+margin_left = 226.0
+margin_right = 295.0
+margin_bottom = 44.0
+custom_constants/separation = 0
+
+[node name="Amount" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelTime/Amount"]
+margin_right = 69.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 17 )
+text = "Current:"
+
+[node name="Label" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelTime/Amount"]
+margin_top = 15.0
+margin_right = 69.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 18 )
+text = "1,200s"
+
+[node name="GlitchPixelTime" type="Button" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelTime"]
+margin_left = 310.0
+margin_right = 478.0
+margin_bottom = 44.0
+focus_mode = 0
+custom_fonts/font = SubResource( 14 )
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 13 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 11 )
+custom_styles/normal = ExtResource( 12 )
+text = "Buy for 10,000 pixels"
+
+[node name="halp" type="Label" parent="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades"]
+margin_top = 472.0
+margin_right = 677.0
+margin_bottom = 487.0
+custom_fonts/font = SubResource( 19 )
+text = "More upgrades coming soon...(suggest ideas please)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Prestige" type="Control" parent="SidePanel/Panel"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SidePanel/Panel/Prestige"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_right = -8.0
+margin_bottom = 6.10352e-05
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="SidePanel/Panel/Prestige/VBoxContainer"]
+margin_top = 176.0
+margin_right = 272.0
+margin_bottom = 233.0
+custom_fonts/font = SubResource( 20 )
+text = "Prestige"
+align = 1
+
+[node name="Label2" type="Label" parent="SidePanel/Panel/Prestige/VBoxContainer"]
+margin_top = 237.0
+margin_right = 272.0
+margin_bottom = 300.0
+custom_fonts/font = SubResource( 21 )
+text = "for double PPP, 
+a higher resolution, 
+and a larger ICM upgrade increment"
+align = 1
+
+[node name="Prestige" type="Button" parent="SidePanel/Panel/Prestige/VBoxContainer"]
+margin_top = 304.0
+margin_right = 272.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 260, 100 )
+focus_mode = 0
+custom_fonts/font = SubResource( 22 )
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 13 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 11 )
+custom_styles/normal = ExtResource( 12 )
+text = "Cost:"
+align = 0
+
+[node name="AutoCursorPower" type="Label" parent="SidePanel/Panel/Prestige/VBoxContainer/Prestige"]
+margin_left = 100.0
+margin_top = 12.0
+margin_right = 258.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 23 )
+text = "5 auto cursor power"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ICM" type="Label" parent="SidePanel/Panel/Prestige/VBoxContainer/Prestige"]
+margin_left = 100.0
+margin_top = 32.0
+margin_right = 149.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 23 )
+text = "5x ICM"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pixels" type="Label" parent="SidePanel/Panel/Prestige/VBoxContainer/Prestige"]
+margin_left = 100.0
+margin_top = 52.0
+margin_right = 204.0
+margin_bottom = 81.0
+custom_fonts/font = SubResource( 23 )
+text = "50,000 pixels"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DIFF" type="Label" parent="SidePanel/Panel/Prestige/VBoxContainer/Prestige"]
+margin_left = 100.0
+margin_top = 72.0
+margin_right = 161.0
+margin_bottom = 101.0
+custom_fonts/font = SubResource( 23 )
+text = "50 DIFF"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="halp" type="Label" parent="SidePanel/Panel/Prestige/VBoxContainer"]
+margin_top = 408.0
+margin_right = 272.0
+margin_bottom = 423.0
+custom_fonts/font = SubResource( 19 )
+text = "More coming soon? (suggest ideas please)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Achievements" type="Control" parent="SidePanel/Panel"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SidePanel/Panel/Achievements"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 4.0
+margin_bottom = -7.99994
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="SidePanel/Panel/Achievements/VBoxContainer"]
+margin_right = 284.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 24 )
+text = "Achievements"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="SidePanel/Panel/Achievements/VBoxContainer"]
+margin_top = 42.0
+margin_right = 284.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 19 )
+text = "Each achievement gives a 1% boost to PPP"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="SidePanel/Panel/Achievements/VBoxContainer"]
+margin_top = 61.0
+margin_right = 284.0
+margin_bottom = 76.0
+custom_fonts/font = SubResource( 19 )
+text = "Current: 0%"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="halp" type="Label" parent="SidePanel/Panel/Achievements/VBoxContainer"]
+margin_top = 80.0
+margin_right = 284.0
+margin_bottom = 113.0
+custom_fonts/font = SubResource( 19 )
+text = "More achievements coming soon...(suggest ideas please)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SidePanel/Panel/Achievements/VBoxContainer"]
+margin_top = 117.0
+margin_right = 284.0
+margin_bottom = 217.0
+rect_min_size = Vector2( 0, 100 )
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FlexGridContainer" type="Container" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer"]
+margin_right = 272.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 272, 100 )
+script = ExtResource( 35 )
+
+[node name="1Image" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_right = 64.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 1 image!"
+texture = ExtResource( 17 )
+
+[node name="5Image" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_right = 64.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 5 images!"
+texture = ExtResource( 4 )
+
+[node name="10Image" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_right = 64.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 10 images!"
+texture = ExtResource( 16 )
+
+[node name="25Image" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_right = 64.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 25 images!"
+texture = ExtResource( 18 )
+
+[node name="50Image" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_right = 64.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 50 images!"
+texture = ExtResource( 19 )
+
+[node name="69Image" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_right = 64.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 69 images!"
+texture = ExtResource( 23 )
+
+[node name="75Image" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_right = 64.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 75 images!"
+texture = ExtResource( 21 )
+
+[node name="100Image" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_right = 64.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 100 images!"
+texture = ExtResource( 20 )
+
+[node name="250Image" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_right = 64.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 250 images!"
+texture = ExtResource( 22 )
+
+[node name="500Image" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_right = 64.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 500 images!"
+texture = ExtResource( 29 )
+
+[node name="1kImage" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_right = 64.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 1k images!"
+texture = ExtResource( 31 )
+
+[node name="2kImage" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_right = 64.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 2k images!"
+texture = ExtResource( 24 )
+
+[node name="3kImage" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_right = 64.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 3k images!"
+texture = ExtResource( 30 )
+
+[node name="4kImage" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_right = 64.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 4k images!"
+texture = ExtResource( 25 )
+
+[node name="5kImage" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_right = 64.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 5k images!"
+texture = ExtResource( 26 )
+
+[node name="6kImage" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_left = 68.0
+margin_right = 132.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 6k images!"
+texture = ExtResource( 32 )
+
+[node name="7kImage" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_right = 64.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 7k images!"
+texture = ExtResource( 27 )
+
+[node name="8kImage" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_right = 64.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 8k images!"
+texture = ExtResource( 33 )
+
+[node name="9kImage" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_right = 64.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 9k images!"
+texture = ExtResource( 34 )
+
+[node name="10kImage" type="TextureRect" parent="SidePanel/Panel/Achievements/VBoxContainer/ScrollContainer/FlexGridContainer"]
+visible = false
+margin_right = 64.0
+margin_bottom = 64.0
+hint_tooltip = "Completed 10k images!"
+texture = ExtResource( 28 )
+
+[node name="Stats" type="Control" parent="SidePanel/Panel"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SidePanel/Panel/Stats"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 18.0
+margin_top = 16.0
+margin_bottom = -7.99994
+scroll_horizontal_enabled = false
+script = ExtResource( 36 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SidePanel/Panel/Stats/ScrollContainer"]
+margin_right = 270.0
+rect_min_size = Vector2( 270, 0 )
+custom_fonts/normal_font = SubResource( 25 )
+bbcode_enabled = true
+script = ExtResource( 15 )
+
+[node name="Menu" type="Control" parent="SidePanel/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 20.0
+margin_right = -16.0
+margin_bottom = -19.9999
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SidePanel/Panel/Menu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 37 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Export" type="Button" parent="SidePanel/Panel/Menu/VBoxContainer"]
+margin_right = 256.0
+margin_bottom = 20.0
+text = "Export game"
+
+[node name="Exportbox" type="TextEdit" parent="SidePanel/Panel/Menu/VBoxContainer"]
+margin_top = 24.0
+margin_right = 256.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 256, 100 )
+text = "Export data appears here..."
+
+[node name="Import" type="Button" parent="SidePanel/Panel/Menu/VBoxContainer"]
+margin_top = 128.0
+margin_right = 256.0
+margin_bottom = 148.0
+text = "Import game"
+
+[node name="Importbox" type="TextEdit" parent="SidePanel/Panel/Menu/VBoxContainer"]
+margin_top = 152.0
+margin_right = 256.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 256, 100 )
+text = "Paste export data here..."
+
+[node name="HardReset" type="Button" parent="SidePanel/Panel/Menu/VBoxContainer"]
+margin_top = 256.0
+margin_right = 256.0
+margin_bottom = 276.0
+text = "Hard Reset"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SidePanel/Panel/Menu/VBoxContainer"]
+margin_top = 280.0
+margin_right = 256.0
+margin_bottom = 304.0
+
+[node name="Label" type="Label" parent="SidePanel/Panel/Menu/VBoxContainer/HBoxContainer"]
+margin_top = 5.0
+margin_right = 130.0
+margin_bottom = 19.0
+text = "Auto cursor tick rate"
+
+[node name="LineEdit" type="LineEdit" parent="SidePanel/Panel/Menu/VBoxContainer/HBoxContainer"]
+margin_left = 134.0
+margin_right = 192.0
+margin_bottom = 24.0
+text = "1.0"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="SidePanel/Panel/Menu/VBoxContainer"]
+margin_top = 308.0
+margin_right = 256.0
+margin_bottom = 328.0
+
+[node name="Label" type="Label" parent="SidePanel/Panel/Menu/VBoxContainer/HBoxContainer2"]
+margin_top = 3.0
+margin_right = 124.0
+margin_bottom = 17.0
+text = "Auto cursor pattern"
+
+[node name="OptionButton" type="OptionButton" parent="SidePanel/Panel/Menu/VBoxContainer/HBoxContainer2"]
+margin_left = 128.0
+margin_right = 231.0
+margin_bottom = 20.0
+text = "Bottom-top"
+items = [ "Bottom-top", null, false, 0, null, "Top-bottom", null, false, 1, null, "Random", null, false, 2, null ]
+selected = 0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="SidePanel/Panel/Menu/VBoxContainer"]
+margin_top = 332.0
+margin_right = 256.0
+margin_bottom = 356.0
+
+[node name="Label" type="Label" parent="SidePanel/Panel/Menu/VBoxContainer/HBoxContainer3"]
+margin_top = 5.0
+margin_right = 110.0
+margin_bottom = 19.0
+text = "Hover to uncover"
+
+[node name="CheckBox" type="CheckBox" parent="SidePanel/Panel/Menu/VBoxContainer/HBoxContainer3"]
+margin_left = 114.0
+margin_right = 138.0
+margin_bottom = 24.0
+
+[node name="Label" type="Label" parent="SidePanel/Panel"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -120.0
+margin_top = -19.9999
+margin_right = -5.0
+margin_bottom = -0.999878
+custom_colors/font_color = Color( 0.231373, 0.254902, 0.372549, 1 )
+custom_fonts/font = SubResource( 26 )
+text = "Prototype v0.0.3"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bottom" type="Control" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -40.0
+margin_right = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ForceUI" type="Button" parent="Bottom"]
+margin_left = 32.0
+margin_top = 16.0
+margin_right = 160.0
+margin_bottom = 40.0
+hint_tooltip = "UI not looking right?
+Force the game to reupdate all the UI scaling. This is automatically done every 10 seconds."
+focus_mode = 0
+mouse_filter = 1
+custom_fonts/font = SubResource( 27 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 6 )
+custom_styles/normal = ExtResource( 2 )
+text = "Force UI Update"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ForceSave" type="Button" parent="Bottom"]
+margin_left = 162.0
+margin_top = 16.0
+margin_right = 290.0
+margin_bottom = 40.0
+hint_tooltip = "The game autosaves every 30 seconds. Need to go right now? Click here!
+If you want to export your save check the menu."
+focus_mode = 0
+mouse_filter = 1
+custom_fonts/font = SubResource( 27 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 6 )
+custom_styles/normal = ExtResource( 2 )
+text = "Manual Save"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Bottom"]
+margin_left = 300.0
+margin_right = 576.0
+margin_bottom = 40.0
+custom_fonts/normal_font = SubResource( 28 )
+bbcode_enabled = true
+bbcode_text = "                           Game by 7w1
+[url=https://google.com/]Current Image[/url]  Concept by 1WithBacon"
+text = "                           Game by 7w1
+Current Image  Concept by 1WithBacon"
+scroll_active = false
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Achievement" type="WindowDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -238.5
+margin_top = -40.0
+margin_right = 238.5
+custom_colors/title_color = Color( 1, 1, 1, 1 )
+custom_fonts/title_font = SubResource( 30 )
+custom_styles/panel = SubResource( 29 )
+window_title = "Achievement!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Achievement"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -18.0
+custom_fonts/font = SubResource( 31 )
+text = "test"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Achievement"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 18.0
+custom_fonts/font = SubResource( 31 )
+text = "test"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AchievementHide" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+
+[node name="AchievementCheck" type="Timer" parent="."]
+
+[node name="PartyPixel" type="AnimatedSprite" parent="."]
+position = Vector2( -380, 72 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 64 )
+frame = 1
+playing = true
+centered = false
+
+[node name="Control" type="Control" parent="PartyPixel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GlitchPixel" type="AnimatedSprite" parent="."]
+position = Vector2( -376, 216 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 65 )
+frame = 16
+playing = true
+centered = false
+
+[node name="Control" type="Control" parent="GlitchPixel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PartyTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="PartyLengthTiemr" type="Timer" parent="."]
+one_shot = true
+
+[node name="GlitchTimer" type="Timer" parent="."]
+wait_time = 1200.0
+one_shot = true
+
+[node name="GlitchLengthTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="HardResetTimer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[node name="QuickBuyTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="QuickBuySpeedTimer" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
+
+[node name="UIUpdate" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="text_entered" from="Picture/Search" to="." method="_on_Search_text_entered"]
+[connection signal="pressed" from="Picture/New Image" to="." method="_on_Button_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+[connection signal="request_completed" from="HTTPRequest2" to="." method="_on_HTTPRequest2_request_completed"]
+[connection signal="timeout" from="AutoCursorTimer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="AutoSaveTimer" to="." method="_on_AutoSaveTimer_timeout"]
+[connection signal="timeout" from="GuiScaleUpdateSpeed" to="." method="_on_GuiScaleUpdateSpeed_timeout"]
+[connection signal="timeout" from="NewImageWait" to="." method="_on_NewImageWait_timeout"]
+[connection signal="pressed" from="SidePanel/Buttons/UpgradesButton" to="SidePanel" method="_on_UpgradesButton_pressed"]
+[connection signal="pressed" from="SidePanel/Buttons/UpgradesButton" to="SidePanel/Panel" method="_on_UpgradesButton_pressed"]
+[connection signal="pressed" from="SidePanel/Buttons/PrestigeButton" to="SidePanel" method="_on_PrestigeButton_pressed"]
+[connection signal="pressed" from="SidePanel/Buttons/PrestigeButton" to="SidePanel/Panel" method="_on_PrestigeButton_pressed"]
+[connection signal="pressed" from="SidePanel/Buttons/AchievementsButton" to="SidePanel" method="_on_AchivementsButton_pressed"]
+[connection signal="pressed" from="SidePanel/Buttons/AchievementsButton" to="SidePanel/Panel" method="_on_AchivementsButton_pressed"]
+[connection signal="pressed" from="SidePanel/Buttons/StatsButton" to="SidePanel" method="_on_StatsButton_pressed"]
+[connection signal="pressed" from="SidePanel/Buttons/StatsButton" to="SidePanel/Panel" method="_on_StatsButton_pressed"]
+[connection signal="pressed" from="SidePanel/Buttons/MenuButton" to="SidePanel" method="_on_MenuButton_pressed"]
+[connection signal="pressed" from="SidePanel/Buttons/MenuButton" to="SidePanel/Panel" method="_on_MenuButton_pressed"]
+[connection signal="pressed" from="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/amount/Buy 10x" to="." method="_on_Buy_10x_pressed"]
+[connection signal="button_down" from="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/AutoCursor/BuyAutoCursor" to="." method="_on_BuyAutoCursor_button_down"]
+[connection signal="button_up" from="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/AutoCursor/BuyAutoCursor" to="." method="_on_BuyAutoCursor_button_up"]
+[connection signal="pressed" from="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/AutoCursor/BuyAutoCursor" to="." method="_on_BuyAutoCursor_pressed"]
+[connection signal="pressed" from="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/AutoCursor/EmpowerAutoCursor" to="." method="_on_EmpowerAutoCursor_pressed"]
+[connection signal="pressed" from="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/ICM/BuyICM" to="." method="_on_BuyICM_pressed"]
+[connection signal="pressed" from="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/ICM/BuyICM2" to="." method="_on_BuyICM2_pressed"]
+[connection signal="pressed" from="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelMulti/PartyPixelMulti" to="." method="_on_PartyPixelMulti_pressed"]
+[connection signal="pressed" from="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelLength/PartyPixelLength" to="." method="_on_PartyPixelLength_pressed"]
+[connection signal="pressed" from="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/PartyPixelTime/PartyPixelTime" to="." method="_on_PartyPixelTime_pressed"]
+[connection signal="pressed" from="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelMulti/GlitchPixelMulti" to="." method="_on_GlitchPixelMulti_pressed"]
+[connection signal="pressed" from="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelLength/GlitchPixelLength" to="." method="_on_GlitchPixelLength_pressed"]
+[connection signal="pressed" from="SidePanel/Panel/Upgrades/ScrollContainer/Upgrades/GlitchPixelTime/GlitchPixelTime" to="." method="_on_GlitchPixelTime_pressed"]
+[connection signal="pressed" from="SidePanel/Panel/Prestige/VBoxContainer/Prestige" to="." method="_on_Prestige_pressed"]
+[connection signal="pressed" from="SidePanel/Panel/Menu/VBoxContainer/Export" to="." method="_on_Export_pressed"]
+[connection signal="pressed" from="SidePanel/Panel/Menu/VBoxContainer/Import" to="." method="_on_Import_pressed"]
+[connection signal="pressed" from="SidePanel/Panel/Menu/VBoxContainer/HardReset" to="." method="_on_HardReset_pressed"]
+[connection signal="text_changed" from="SidePanel/Panel/Menu/VBoxContainer/HBoxContainer/LineEdit" to="." method="_on_LineEdit_text_changed"]
+[connection signal="item_selected" from="SidePanel/Panel/Menu/VBoxContainer/HBoxContainer2/OptionButton" to="." method="_on_OptionButton_item_selected"]
+[connection signal="toggled" from="SidePanel/Panel/Menu/VBoxContainer/HBoxContainer3/CheckBox" to="." method="_on_CheckBox_toggled"]
+[connection signal="pressed" from="Bottom/ForceUI" to="." method="_on_ForceUI_pressed"]
+[connection signal="pressed" from="Bottom/ForceSave" to="." method="_on_ForceSave_pressed"]
+[connection signal="popup_hide" from="Achievement" to="." method="_on_Achivement_popup_hide"]
+[connection signal="timeout" from="AchievementHide" to="." method="_on_AchivementHide_timeout"]
+[connection signal="timeout" from="AchievementCheck" to="." method="_on_AchivementCheck_timeout"]
+[connection signal="timeout" from="PartyTimer" to="." method="_on_PartyTimer_timeout"]
+[connection signal="timeout" from="PartyLengthTiemr" to="." method="_on_PartyLengthTiemr_timeout"]
+[connection signal="timeout" from="GlitchTimer" to="." method="_on_GlitchTimer_timeout"]
+[connection signal="timeout" from="GlitchLengthTimer" to="." method="_on_GlitchLengthTimer_timeout"]
+[connection signal="timeout" from="HardResetTimer" to="." method="_on_HardResetTimer_timeout"]
+[connection signal="timeout" from="QuickBuyTimer" to="." method="_on_QuickBuyTimer_timeout"]
+[connection signal="timeout" from="QuickBuySpeedTimer" to="." method="_on_QuickBuySpeedTimer_timeout"]
+[connection signal="timeout" from="UIUpdate" to="." method="_on_UIUpdate_timeout"]
