@@ -1,7 +1,6 @@
 extends CenterContainer
 
 
-
 export var node_image_texture_: NodePath
 onready var image_texture: = get_node(node_image_texture_) as Node
 
@@ -48,6 +47,7 @@ var old_selected_api = -1
 func _ready():
 	api_selection.add_item("Imgur")
 	api_selection.add_item("The Cat API")
+	api_selection.add_item("The Dog API")
 	
 func _process(_delta):
 	image_container.rect_scale.x = scale
@@ -127,6 +127,7 @@ func _on_NewImageTimer_timeout():
 					print("Skipped, incompatible image type.")
 					new_image()
 					return
+					
 	elif selected_api == 1: # THE CAT API
 		if old_selected_api != 1 or data == null or data.size() == 0:
 			old_selected_api = 1
@@ -149,7 +150,31 @@ func _on_NewImageTimer_timeout():
 					past_images.pop_front()
 			# Display image
 			image = Image.new()
-			http_request_two.request(image_link)
+			http_request_two.request(image_link,CAT_HEADERS,true,HTTPClient.METHOD_GET)
+					
+	elif selected_api == 2: # THE DOG API
+		if old_selected_api != 2 or data == null or data.size() == 0:
+			old_selected_api = 2
+			# Request new image
+			url = 'https://api.thedogapi.com/v1/images/search?mime_types=jpg'
+			http_request_one.request(url,DOG_HEADERS,true,HTTPClient.METHOD_GET)
+			print("Requesting new image from the dog api...")
+		else:
+			print("Displaying image...")
+			image_type = "image/jpeg"
+			image_link = data[0]["url"]
+			data = null
+			# Check if image has been seen recently
+			if image_link in past_images:
+					new_image()
+					return
+			else:
+				past_images.append(image_link)
+				if past_images.size() >= 10:
+					past_images.pop_front()
+			# Display image
+			image = Image.new()
+			http_request_two.request(image_link,DOG_HEADERS,true,HTTPClient.METHOD_GET)
 
 func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 	if int(response_code) != 200:
