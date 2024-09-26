@@ -209,130 +209,162 @@ size = 18
 font_data = ExtResource( 3 )
 
 [sub_resource type="AtlasTexture" id=32]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 0, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=33]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 16, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=34]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 32, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=35]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 48, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=36]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 64, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=37]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 80, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=38]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 96, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=39]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 112, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=40]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 128, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=41]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 144, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=42]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 160, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=43]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 176, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=44]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 192, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=45]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 208, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=46]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 224, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=47]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 240, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=48]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 256, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=49]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 272, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=50]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 288, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=51]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 304, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=52]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 320, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=53]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 336, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=54]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 352, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=55]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 368, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=56]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 384, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=57]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 400, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=58]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 416, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=59]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 432, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=60]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 448, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=61]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 464, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=62]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 480, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=63]
+flags = 4
 atlas = ExtResource( 14 )
 region = Rect2( 496, 0, 16, 16 )
 
@@ -1810,7 +1842,7 @@ one_shot = true
 position = Vector2( -380, 72 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 64 )
-frame = 1
+frame = 29
 playing = true
 centered = false
 
@@ -1825,7 +1857,7 @@ __meta__ = {
 position = Vector2( -376, 216 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 65 )
-frame = 16
+frame = 19
 playing = true
 centered = false
 
