@@ -380,7 +380,10 @@ func _process(delta):
 		$Picture/Pixels.hide()
 		$Picture/Pixels2.hide()
 		$Picture/Pixels3.hide()
-		$SidePanel.hide()
+		$SidePanel/Buttons/UpgradesButton.hide()
+		$SidePanel/Buttons/PrestigeButton.hide()
+		$SidePanel/Buttons/AchievementsButton.hide()
+		$SidePanel/Buttons/StatsButton.hide()
 	elif completed_images == 1:
 		$"Picture/New Image".show()
 	elif completed_images == 2:
@@ -391,17 +394,12 @@ func _process(delta):
 		$Picture/Pixels2.show()
 		$Picture/Pixels3.show()
 	elif completed_images == 5:
-		$SidePanel.show()
-		$SidePanel/Buttons/PrestigeButton.hide()
-		$SidePanel/Buttons/AchievementsButton.hide()
-		$SidePanel/Buttons/StatsButton.hide()
-		$SidePanel/Buttons/MenuButton.hide()
+		$SidePanel/Buttons/UpgradesButton.show()
 	elif completed_images == 10:
 		$SidePanel/Buttons/PrestigeButton.show()
 	elif completed_images == 25:
 		$SidePanel/Buttons/AchievementsButton.show()
 		$SidePanel/Buttons/StatsButton.show()
-		$SidePanel/Buttons/MenuButton.show()
 		
 	# Work around for mouse position collision with textures because godot is broken as f with this
 	var rect_check = Rect2(Vector2(0,0), $Picture/Container/TextureOverlay.get_global_rect().size)

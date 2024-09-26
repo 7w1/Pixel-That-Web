@@ -1,8 +1,8 @@
 extends Control
 
 func _ready():
-	$Buttons/UpgradesButton.disabled = true
-	# Set panel content to upgrades
+	$Buttons/MenuButton.disabled = true
+	# Set panel content to menu
 
 func _on_UpgradesButton_pressed():
 	reenable_buttons()

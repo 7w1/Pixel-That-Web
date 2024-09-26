@@ -2,7 +2,7 @@ extends Panel
 
 func _ready():
 	hide_panels()
-	$Upgrades.show()
+	$Menu.show()
 
 func _process(_delta):
 	self.rect_size.y = OS.get_window_size().y
