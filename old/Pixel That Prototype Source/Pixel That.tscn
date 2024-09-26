@@ -1842,7 +1842,7 @@ one_shot = true
 position = Vector2( -380, 72 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 64 )
-frame = 29
+frame = 9
 playing = true
 centered = false
 
@@ -1857,7 +1857,7 @@ __meta__ = {
 position = Vector2( -376, 216 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 65 )
-frame = 19
+frame = 14
 playing = true
 centered = false
 
