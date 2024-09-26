@@ -47,7 +47,7 @@ mouse_button={
 }
 buyautocursors={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":77,"unicode":0,"echo":false,"script":null)
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":77,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
 
@@ -59,6 +59,6 @@ common/enable_pause_aware_picking=true
 
 quality/intended_usage/framebuffer_allocation=1
 quality/intended_usage/framebuffer_allocation.mobile=1
+gles2/compatibility/disable_half_float=true
 environment/default_clear_color=Color( 0.0509804, 0.0470588, 0.0901961, 1 )
 environment/default_environment="res://default_env.tres"
-gles2/compatibility/disable_half_float=true
